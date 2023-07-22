@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import { Link } from "react-router-dom"
 
 export default function NavbarBasicPreview() {
     const [isToggleOpen, setIsToggleOpen] = useState(false)
@@ -19,7 +20,7 @@ export default function NavbarBasicPreview() {
                             aria-label="logo"
                             aria-current="page"
                             className="flex items-center gap-2 whitespace-nowrap py-3 text-lg focus:outline-none lg:flex-1"
-                            href="javascript:void(0)"
+                            to="javascript:void(0)"
                         >
                             <img src="https://www.logolynx.com/images/logolynx/2e/2e6bc50bb603487c026fa4ebfcb92c08.png" className="h-10 w-10" alt="" />
                             CollegeSpotlight
@@ -61,49 +62,60 @@ export default function NavbarBasicPreview() {
                                 }`}
                         >
                             <li role="none" className="flex items-stretch">
-                                <a
+                                <Link
                                     role="menuitem"
                                     aria-haspopup="false"
                                     tabIndex="0"
                                     className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-emerald-500 focus:bg-emerald-50 focus:outline-none focus-visible:outline-none lg:px-8"
-                                    href="javascript:void(0)"
+                                    to="/"
                                 >
                                     <span>Home</span>
-                                </a>
+                                </Link>
                             </li>
                             <li role="none" className="flex items-stretch">
-                                <a
+                                <Link
                                     role="menuitem"
                                     aria-current="page"
                                     aria-haspopup="false"
                                     tabIndex="0"
                                     className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-emerald-600 focus:bg-emerald-50 focus:outline-none focus-visible:outline-none lg:px-8"
-                                    href="javascript:void(0)"
+                                    to="colleges"
                                 >
-                                    <span>Features</span>
-                                </a>
+                                    <span>Colleges</span>
+                                </Link>
                             </li>
                             <li role="none" className="flex items-stretch">
-                                <a
+                                <Link
                                     role="menuitem"
                                     aria-haspopup="false"
                                     tabIndex="0"
                                     className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-emerald-500 focus:bg-emerald-50 focus:outline-none focus-visible:outline-none lg:px-8"
-                                    href="javascript:void(0)"
+                                    to="admissions"
                                 >
-                                    <span>Pricing</span>
-                                </a>
+                                    <span>Admissions</span>
+                                </Link>
                             </li>
                             <li role="none" className="flex items-stretch">
-                                <a
+                                <Link
                                     role="menuitem"
                                     aria-haspopup="false"
                                     tabIndex="0"
                                     className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-emerald-500 focus:bg-emerald-50 focus:outline-none focus-visible:outline-none lg:px-8"
-                                    href="javascript:void(0)"
+                                    to="mycollege"
                                 >
-                                    <span>About</span>
-                                </a>
+                                    <span>My College</span>
+                                </Link>
+                            </li>
+                            <li role="none" className="flex items-stretch">
+                                <Link
+                                    role="menuitem"
+                                    aria-haspopup="false"
+                                    tabIndex="0"
+                                    className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-emerald-500 focus:bg-emerald-50 focus:outline-none focus-visible:outline-none lg:px-8"
+                                    to="login"
+                                >
+                                    <span>Login</span>
+                                </Link>
                             </li>
                         </ul>
                     </nav>
