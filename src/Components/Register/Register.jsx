@@ -1,27 +1,46 @@
-import React, { useState } from 'react';
+import { updateProfile } from 'firebase/auth';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../Providers/AuthProviders';
 
 const Registration = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    photoUrl: '',
-    email: '',
-    password: '',
-  });
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevFormData) => ({
-      ...prevFormData,
-      [name]: value,
-    }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Add your registration logic here to handle form submission
-    console.log(formData);
-  };
+  const { createUser } = useContext(AuthContext)
+  const handleRegister = event => {
+    event.preventDefault();
+    const form = event.target;
+    const displayName = form.displayName.value;
+    const email = form.email.value;
+    const password = form.password.value;
+    const photoUrl = form.photoUrl.value;
+    console.log(displayName,email,password,photoUrl)
+    createUser(,email, password, photoUrl)
+    .then((result) => {
+        // User created successfully, update profile
+        const loggedUser = result.user;
+        return updateProfile(loggedUser, {
+            displayName: displayName,
+            photoURL: photoUrl,
+        }).then(() => {
+            console.log("Profile updated successfully");
+            console.log(loggedUser);
+            form.reset();
+        });
+    })
+    .catch((error) => {
+        console.error("Error creating user:", error.message);
+    });
+  }
+      // Google Sign in with popup
+    //   const handleWithGoogleSingUp = () => {
+    //     googleSignIn()
+    //     .then((result)=>{
+    //         const loggedGoogleUser = result.user;
+    //         console.log(loggedGoogleUser)
+    //     })
+    //     .catch((error) => {
+    //         console.error(error.message);
+    //       });
+    // }
 
   return (
     <div className="py-6">
@@ -36,58 +55,47 @@ const Registration = () => {
         <div className="w-full p-8 lg:w-1/2">
           <h2 className="text-2xl font-semibold text-gray-700 text-center">Brand</h2>
           <p className="text-xl text-gray-600 text-center">Create an account</p>
-          <div className="mt-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2">Full Name</label>
-            <input
-              className="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full appearance-none"
-              type="text"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          <div className="mt-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2">Photo URL</label>
-            <input
-              className="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full appearance-none"
-              type="text"
-              name="photoUrl"
-              value={formData.photoUrl}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          <div className="mt-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2">Email Address</label>
-            <input
-              className="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full appearance-none"
-              type="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          <div className="mt-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2">Password</label>
-            <input
-              className="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full appearance-none"
-              type="password"
-              name="password"
-              value={formData.password}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          <div className="mt-8">
-            <button
-              className="bg-gray-700 text-white font-bold py-2 px-4 w-full rounded hover:bg-gray-600"
-              onClick={handleSubmit}
-            >
-              Register
-            </button>
-          </div>
+          <form onSubmit={handleRegister}>
+            <div className="mt-4">
+              <label className="block text-gray-700 text-sm font-bold mb-2">Full Name</label>
+              <input
+                className="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full appearance-none"
+                type="text"
+                name="displayName"
+                required
+              />
+            </div>
+            <div className="mt-4">
+              <label className="block text-gray-700 text-sm font-bold mb-2">Email Address</label>
+              <input
+                className="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full appearance-none"
+                type="email"
+                name="email"
+                required
+              />
+            </div>
+            <div className="mt-4">
+              <label className="block text-gray-700 text-sm font-bold mb-2">Password</label>
+              <input
+                className="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full appearance-none"
+                type="password"
+                name="password"
+                required
+              />
+            </div>
+            <div className="mt-4">
+              <label className="block text-gray-700 text-sm font-bold mb-2">Photo URL</label>
+              <input
+                className="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full appearance-none"
+                type="text"
+                name="photoUrl"
+                required
+              />
+            </div>
+            <div className="mt-8">
+              <input  type="submit" className="bg-gray-700 text-white font-bold py-2 px-4 w-full rounded hover:bg-gray-600" value={'Register'} />
+            </div>
+          </form>
           <div className="mt-4 flex items-center justify-between">
             <span className="border-b w-1/5 md:w-1/4"></span>
             <Link to="/login" className="text-xs text-gray-500 uppercase">
@@ -97,7 +105,7 @@ const Registration = () => {
           </div>
         </div>
       </div>
-    </div> 
+    </div>
   );
 };
 

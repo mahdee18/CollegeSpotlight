@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from "react-router-dom"
+import { AuthContext } from '../../Providers/AuthProviders';
 
 const Login = () => {
+  const { createUser,googleSignIn } = useContext(AuthContext)
   const handleSubmit= event=>{
     event.preventDefault()
     const form = event.target;
