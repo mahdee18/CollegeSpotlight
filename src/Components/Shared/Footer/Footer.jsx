@@ -1,6 +1,6 @@
 import React from "react"
 
-export default function FooterFiveColsLogoSubFooter() {
+export default function Footer() {
   return (
     <>
       {/*    <!-- Component: Five Columns Footer with Logo and Sub Footer --> */}

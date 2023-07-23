@@ -1,16 +1,10 @@
 import React, { useContext } from 'react';
 import { Link } from "react-router-dom"
 import { AuthContext } from '../../Providers/AuthProviders';
+import Swal from 'sweetalert2';
 
 const Login = () => {
-  const { createUser,googleSignIn } = useContext(AuthContext)
-  const handleSubmit= event=>{
-    event.preventDefault()
-    const form = event.target;
-    const email = form.email.value;
-    const password = form.password.value;
-    console.log(email,password)
-  }
+
   return (
     <div className="py-6">
       <div className="flex bg-white rounded-lg shadow-lg overflow-hidden mx-auto max-w-sm lg:max-w-4xl">
@@ -45,11 +39,14 @@ const Login = () => {
 
               <span className="border-b w-1/5 md:w-1/4"></span>
             </div>
-            <a href="#" className="flex items-center justify-center mt-4 text-white rounded-lg shadow-md hover:bg-gray-100">
+            <a
+              href="#"
+              className="flex items-center justify-center mt-4 text-white rounded-lg shadow-md hover:bg-gray-100"
+            >
               <div className="px-4 py-3">
                 <img src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-512.png" className='h-10 w-10' alt="" />
               </div>
-              <h1 className="px-4 py-3 w-5/6 text-center text-gray-600 font-bold">Sign in with Google</h1>
+              <button className="px-4 py-3 w-5/6 text-center text-gray-600 font-bold" onClick={handlegoogleSignIn}>Sign in with Google</button>
             </a>
           </form>
         </div>

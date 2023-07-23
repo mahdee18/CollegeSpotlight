@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { Link } from "react-router-dom"
 
-export default function NavbarBasicPreview() {
+export default function Navbar() {
     const [isToggleOpen, setIsToggleOpen] = useState(false)
 
     return (
