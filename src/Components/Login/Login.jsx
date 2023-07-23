@@ -4,7 +4,52 @@ import { AuthContext } from '../../Providers/AuthProviders';
 import Swal from 'sweetalert2';
 
 const Login = () => {
-
+  const { singIn, googleSignIn } = useContext(AuthContext)
+  const handleSubmit = event => {
+    event.preventDefault();
+    const form = event.target;
+    const email = form.email.value;
+    const password = form.password.value;
+    console.log(email, password);
+  
+    singIn(email, password)
+      .then((result) => {
+        // Signed in 
+        const user = result.user;
+        console.log(user);
+        Swal.fire({
+          icon: 'success',
+          title: 'Logged in successfully!',
+        });
+      })
+      .catch((error) => {
+        console.log(error.message);
+        Swal.fire({
+          icon: 'error',
+          title: 'Sign In Error',
+          text: error.message,
+        });
+      });
+  }
+  
+  const handlegoogleSignIn = () => {
+    googleSignIn()
+      .then(result => {
+        const createdUser = result.user;
+        console.log(createdUser);
+        Swal.fire({
+          icon: 'success',
+          title: 'User logged in successfully!',
+        });
+      })
+      .catch(error => {
+        Swal.fire({
+          icon: 'error',
+          title: 'Login Error',
+          text: error.message,
+        });
+      });
+  }
   return (
     <div className="py-6">
       <div className="flex bg-white rounded-lg shadow-lg overflow-hidden mx-auto max-w-sm lg:max-w-4xl">

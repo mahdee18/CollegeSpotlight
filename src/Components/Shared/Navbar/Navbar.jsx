@@ -1,8 +1,28 @@
-import React, { useState } from "react"
+import React, { useContext, useState } from "react"
 import { Link } from "react-router-dom"
+import { AuthContext } from "../../../Providers/AuthProviders";
+import Swal from "sweetalert2";
 
 export default function Navbar() {
-    const [isToggleOpen, setIsToggleOpen] = useState(false)
+    const [isToggleOpen, setIsToggleOpen] = useState(false);
+    const { user, logOut } = useContext(AuthContext);
+    const handleLogOut = () => {
+        logOut()
+            .then(() => {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'User logged out successfully!',
+                });
+            })
+            .catch((error) => {
+                console.error(error.message);
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Logout Error',
+                    text: error.message,
+                });
+            });
+    };
 
     return (
         <>
@@ -57,8 +77,8 @@ export default function Navbar() {
                             role="menubar"
                             aria-label="Select page"
                             className={`absolute top-0 left-0 z-[-1] h-[28.5rem] w-full justify-center overflow-hidden  overflow-y-auto overscroll-contain bg-white/90 px-8 pb-12 pt-24 font-medium transition-[opacity,visibility] duration-300 lg:visible lg:relative lg:top-0  lg:z-0 lg:flex lg:h-full lg:w-auto lg:items-stretch lg:overflow-visible lg:bg-white/0 lg:px-0 lg:py-0  lg:pt-0 lg:opacity-100 ${isToggleOpen
-                                    ? "visible opacity-100 backdrop-blur-sm"
-                                    : "invisible opacity-0"
+                                ? "visible opacity-100 backdrop-blur-sm"
+                                : "invisible opacity-0"
                                 }`}
                         >
                             <li role="none" className="flex items-stretch">
@@ -107,15 +127,36 @@ export default function Navbar() {
                                 </Link>
                             </li>
                             <li role="none" className="flex items-stretch">
-                                <Link
-                                    role="menuitem"
-                                    aria-haspopup="false"
-                                    tabIndex="0"
-                                    className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-emerald-500 focus:bg-emerald-50 focus:outline-none focus-visible:outline-none lg:px-8"
-                                    to="login"
-                                >
-                                    <span>Login</span>
-                                </Link>
+                                {user ? (
+                                    <div className="flex items-center justify-center gap-6">
+                                        <img
+                                            title={user.displayName}
+                                            className="w-12 h-12 rounded-full"
+                                            src={user.photoURL}
+                                            alt=""
+                                        />
+                                        <Link
+                                            onClick={handleLogOut}
+
+                                            role="menuitem"
+                                            aria-haspopup="false"
+                                            tabIndex="0"
+                                            className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-emerald-500 focus:bg-emerald-50 focus:outline-none focus-visible:outline-none lg:px-8"
+                                            to="login"
+                                        >
+                                            Logout
+                                        </Link>
+                                    </div>
+                                ) : (
+                                    <Link to="/login"
+                                        role="menuitem"
+                                        aria-haspopup="false"
+                                        tabIndex="0"
+                                        className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-emerald-500 focus:bg-emerald-50 focus:outline-none focus-visible:outline-none lg:px-8"
+                                    >
+                                        Login
+                                    </Link>
+                                )}
                             </li>
                         </ul>
                     </nav>
