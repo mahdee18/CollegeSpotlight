@@ -8,11 +8,13 @@ import MyColleges from "../Components/MyColleges/MyColleges";
 import Login from "../Components/Login/Login";
 import Registration from "../Components/Register/Register";
 import Home from "../Components/Home/Home/Home";
+import NotFoundPage from "../Components/NotFoundPage/NotFoundPage";
   
  export const router = createBrowserRouter([
     {
       path: "/",
       element: <Main></Main>,
+      errorElement: <NotFoundPage></NotFoundPage>,
       children: [
 
         {
