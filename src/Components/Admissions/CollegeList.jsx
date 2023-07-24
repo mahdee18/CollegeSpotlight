@@ -9,7 +9,7 @@ const CollegeList = () => {
             <ul className="space-y-4">
                 {collegeData.map(college => (
                     <li key={college._id} className="flex items-center justify-between">
-                        <Link to={`/admission/${college._id}`} className="text-black hover:underline">
+                        <Link to={`/admissions/${college._id}`} className="text-black hover:underline">
                             {college.college_name}
                         </Link>
                     </li>

@@ -13,7 +13,6 @@ const Colleges = () => {
                     <div key={index} className="relative mx-auto w-full max-w-sm pt-6 shadow-lg px-2 pb-2">
                         <div key={index} className="relative mx-auto w-full max-w-sm pt-6 shadow-lg px-2 pb-2">
                             <a
-                                href="#"
                                 className="relative inline-block w-full transform transition-transform duration-300 ease-in-out"
                             >
                                 <div className="rounded-lg">
