@@ -71,7 +71,7 @@ const Review = () => {
                                         </svg>
                                     </div>
 
-                                    <p className="mt-1 text-lg font-medium text-gray-700">Maryam Tufayel</p>
+                                    <p className="mt-1 text-lg font-medium text-gray-700">Anne Marie</p>
                                 </div>
                             </div>
 
@@ -143,7 +143,7 @@ const Review = () => {
                                         </svg>
                                     </div>
 
-                                    <p className="mt-1 text-lg font-medium text-gray-700">Paul Starling</p>
+                                    <p className="mt-1 text-lg font-medium text-gray-700">Jhon Doe</p>
                                 </div>
                             </div>
 

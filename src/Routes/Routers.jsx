@@ -22,19 +22,19 @@ export const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>,
-        loader: () => fetch('http://localhost:4000/cardData')
+        loader: () => fetch('https://college-spotlight-server.vercel.app/cardData')
 
       },
       {
         path: '/cardData/:id',
         element: <CardDetails></CardDetails>,
-        loader: ({ params }) => fetch(`http://localhost:4000/cardData/${params.id}`)
+        loader: ({ params }) => fetch(`https://college-spotlight-server.vercel.app/cardData/${params.id}`)
 
       },
       {
         path: '/colleges',
         element: <Colleges></Colleges>,
-        loader: () => fetch('http://localhost:4000/cardData')
+        loader: () => fetch('https://college-spotlight-server.vercel.app/cardData')
       },
       {
         path: '/admissions/:id',
@@ -43,7 +43,7 @@ export const router = createBrowserRouter([
       {
         path: "/admissions",
         element: <CollegeList></CollegeList>,
-        loader: () => fetch('http://localhost:4000/cardData')
+        loader: () => fetch('https://college-spotlight-server.vercel.app/cardData')
       },
       {
         path: '/mycollege',
