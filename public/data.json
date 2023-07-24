@@ -1,159 +1,366 @@
 [
-    {
-      "college_image": "https://theweeklychallenger.com/wp-content/uploads/2018/08/Talladega_College_Savery_Library.jpg",
-      "college_name": "University of Alberta",
-      "admission_dates": "Fall 2023 - Spring 2024",
-      
-      "events": [
-        {
-          "event_name": "Orientation Day",
-          "date": "2023-08-25",
-          "location": "Campus Auditorium"
-        },
-        {
-          "event_name": "Research Symposium",
-          "date": "2023-11-10",
-          "location": "Science Building"
-        },
-        {
-          "event_name": "Sports Fest",
-          "date": "2024-02-15",
-          "location": "Sports Grounds"
-        }
-      ],
-      "research_history": [
-        {
-          "research_title": "Advancements in Robotics",
-          "faculty_lead": "Prof. John Smith",
-          "date": "2022-05-20"
-        },
-        {
-          "research_title": "Climate Change Mitigation",
-          "faculty_lead": "Dr. Emily Johnson",
-          "date": "2023-01-15"
-        }
-      ],
-      "sports_categories": [
-        {
-          "category_name": "Soccer",
-          "description": "Soccer is one of the most popular sports at University of XYZ. Students participate in friendly matches, intramural leagues, and intercollegiate competitions."
-        },
-        {
-          "category_name": "Basketball",
-          "description": "Basketball enthusiasts can join the college team or play casual games at the campus courts. Regular tournaments are organized to promote healthy competition."
-        },
-        {
-          "category_name": "Swimming",
-          "description": "The college has a well-equipped swimming pool where students can enjoy recreational swimming and compete in swimming events."
-        },
-        {
-          "category_name": "Track and Field",
-          "description": "For those who love athletics, track and field events provide an opportunity to showcase their speed, endurance, and strength in various disciplines."
-        }
-      ]
-    },
-    {
-      "college_image": "https://media.workandmoney.com/cb/c8/cbc843fcb6cd491da47bddf7cbbda1e1.jpeg",
-      "college_name": "University of Calgary",
-      "admission_dates": "Spring 2024",
-      "events": [
-        {
-          "event_name": "Welcome Fair",
-          "date": "2024-01-10",
-          "location": "Student Center"
-        },
-        {
-          "event_name": "Literary Festival",
-          "date": "2024-03-18",
-          "location": "Library"
-        },
-        {
-          "event_name": "Annual Sports Day",
-          "date": "2024-05-05",
-          "location": "Sports Complex"
-        }
-      ],
-      "research_history": [
-        {
-          "research_title": "Biotechnology Breakthroughs",
-          "faculty_lead": "Dr. Sarah Lee",
-          "date": "2022-11-30"
-        },
-        {
-          "research_title": "Renewable Energy Solutions",
-          "faculty_lead": "Prof. David Johnson",
-          "date": "2023-06-22"
-        }
-      ],
-      "sports_categories": [
-        {
-          "category_name": "Tennis",
-          "description": "Tennis enthusiasts can enjoy playing singles and doubles matches. The college hosts tennis tournaments, encouraging friendly competition."
-        },
-        {
-          "category_name": "Volleyball",
-          "description": "Volleyball is a popular sport at ABC College. Students can join the volleyball team or play casual games on the campus courts."
-        },
-        {
-          "category_name": "Badminton",
-          "description": "Badminton courts are available for students to play and enjoy this fast-paced racquet sport."
-        },
-        {
-          "category_name": "Table Tennis",
-          "description": "Table Tennis facilities are provided for students who enjoy the fast and competitive nature of the sport."
-        }
-      ]
-    },
-    {
-      "college_image": "https://agnr.umd.edu/sites/agnr.umd.edu/files/styles/optimized/public/2019-01/symons%20hall.jpg?itok=OsfiAXlc",
-      "college_name": "MacEwan University",
-      "admission_dates": "Fall 2024",
-      "events": [
-        {
-          "event_name": "Open House",
-          "date": "2024-07-30",
-          "location": "Main Hall"
-        },
-        {
-          "event_name": "Tech Expo",
-          "date": "2024-09-20",
-          "location": "Engineering Building"
-        },
-        {
-          "event_name": "Intercollege Sports Meet",
-          "date": "2025-01-12",
-          "location": "Sports Grounds"
-        }
-      ],
-      "research_history": [
-        {
-          "research_title": "Artificial Intelligence Applications",
-          "faculty_lead": "Prof. Jane Williams",
-          "date": "2023-12-05"
-        },
-        {
-          "research_title": "Sustainable Urban Planning",
-          "faculty_lead": "Dr. Michael Brown",
-          "date": "2024-02-18"
-        }
-      ],
-      "sports_categories": [
-        {
-          "category_name": "Cricket",
-          "description": "Cricket is a popular sport at PQR Institute, with regular matches and tournaments held on the college campus."
-        },
-        {
-          "category_name": "Rugby",
-          "description": "Rugby enthusiasts can join the college team and participate in intercollege competitions, showcasing their strength and teamwork."
-        },
-        {
-          "category_name": "Baseball",
-          "description": "Baseball facilities are available for students who enjoy this bat-and-ball game. Friendly matches and competitions are organized regularly."
-        },
-        {
-          "category_name": "Golf",
-          "description": "Golf enthusiasts can practice their swing and putting skills at the college's golf course, enjoying the serene and challenging environment."
-        }
-      ]
-    }
-  ]
+  {
+    "college_image": "https://theweeklychallenger.com/wp-content/uploads/2018/08/Talladega_College_Savery_Library.jpg",
+    "college_name": "University of Alberta",
+    "admission_dates": "Fall 2023 - Spr 2024",
+    "admission_process": "Submit online application and required documents before the deadline. Attend admission interviews if required.",
+    "events": [
+      {
+        "event_name": "Orientation Day",
+        "date": "2023-08-25",
+        "location": "Campus Auditorium"
+      },
+      {
+        "event_name": "Research Symposium",
+        "date": "2023-11-10",
+        "location": "Science Building"
+      },
+      {
+        "event_name": "Sports Fest",
+        "date": "2024-02-15",
+        "location": "Sports Grounds"
+      }
+    ],
+    "research_history": [
+      {
+        "research_title": "Advancements in Robotics",
+        "faculty_lead": "Prof. John Smith",
+        "date": "2022-05-20"
+      },
+      {
+        "research_title": "Climate Change Mitigation",
+        "faculty_lead": "Dr. Emily Johnson",
+        "date": "2023-01-15"
+      },
+      {
+        "research_title": "Earthquake Effects",
+        "faculty_lead": "Dr. Johnson",
+        "date": "2023-8-15"
+      }
+    ],
+    "sports_categories": [
+      {
+        "category_name": "Soccer",
+        "description": "Soccer is one of the most popular sports at University of XYZ. Students participate in friendly matches, intramural leagues, and intercollegiate competitions."
+      },
+      {
+        "category_name": "Basketball",
+        "description": "Basketball enthusiasts can join the college team or play casual games at the campus courts. Regular tournaments are organized to promote healthy competition."
+      },
+      {
+        "category_name": "Swimming",
+        "description": "The college has a well-equipped swimming pool where students can enjoy recreational swimming and compete in swimming events."
+      },
+      {
+        "category_name": "Football",
+        "description": "The college has a well-equipped on field where students can enjoy recreational swimming and compete in football events."
+      },
+      {
+        "category_name": "Track and Field",
+        "description": "For those who love athletics, track and field events provide an opportunity to showcase their speed, endurance, and strength in various disciplines."
+      }
+    ]
+  },
+  {
+    "college_image": "https://theweeklychallenger.com/wp-content/uploads/2018/08/Talladega_College_Savery_Library.jpg",
+    "college_name": "University of Alberta",
+    "admission_dates": "Fall 2023 - Spr 2024",
+    "admission_process": "Submit online application and required documents before the deadline. Attend admission interviews if required.",
+    "events": [
+      {
+        "event_name": "Orientation Day",
+        "date": "2023-08-25",
+        "location": "Campus Auditorium"
+      },
+      {
+        "event_name": "Research Symposium",
+        "date": "2023-11-10",
+        "location": "Science Building"
+      },
+      {
+        "event_name": "Sports Fest",
+        "date": "2024-02-15",
+        "location": "Sports Grounds"
+      }
+    ],
+    "research_history": [
+      {
+        "research_title": "Advancements in Robotics",
+        "faculty_lead": "Prof. John Smith",
+        "date": "2022-05-20"
+      },
+      {
+        "research_title": "Climate Change Mitigation",
+        "faculty_lead": "Dr. Emily Johnson",
+        "date": "2023-01-15"
+      },
+      {
+        "research_title": "Earthquake Effects",
+        "faculty_lead": "Dr. Johnson",
+        "date": "2023-8-15"
+      }
+    ],
+    "sports_categories": [
+      {
+        "category_name": "Soccer",
+        "description": "Soccer is one of the most popular sports at University of XYZ. Students participate in friendly matches, intramural leagues, and intercollegiate competitions."
+      },
+      {
+        "category_name": "Basketball",
+        "description": "Basketball enthusiasts can join the college team or play casual games at the campus courts. Regular tournaments are organized to promote healthy competition."
+      },
+      {
+        "category_name": "Swimming",
+        "description": "The college has a well-equipped swimming pool where students can enjoy recreational swimming and compete in swimming events."
+      },
+      {
+        "category_name": "Football",
+        "description": "The college has a well-equipped on field where students can enjoy recreational swimming and compete in football events."
+      },
+      {
+        "category_name": "Track and Field",
+        "description": "For those who love athletics, track and field events provide an opportunity to showcase their speed, endurance, and strength in various disciplines."
+      }
+    ]
+  },
+  {
+    "college_image": "https://theweeklychallenger.com/wp-content/uploads/2018/08/Talladega_College_Savery_Library.jpg",
+    "college_name": "University of Alberta",
+    "admission_dates": "Fall 2023 - Spr 2024",
+    "admission_process": "Submit online application and required documents before the deadline. Attend admission interviews if required.",
+    "events": [
+      {
+        "event_name": "Orientation Day",
+        "date": "2023-08-25",
+        "location": "Campus Auditorium"
+      },
+      {
+        "event_name": "Research Symposium",
+        "date": "2023-11-10",
+        "location": "Science Building"
+      },
+      {
+        "event_name": "Sports Fest",
+        "date": "2024-02-15",
+        "location": "Sports Grounds"
+      }
+    ],
+    "research_history": [
+      {
+        "research_title": "Advancements in Robotics",
+        "faculty_lead": "Prof. John Smith",
+        "date": "2022-05-20"
+      },
+      {
+        "research_title": "Climate Change Mitigation",
+        "faculty_lead": "Dr. Emily Johnson",
+        "date": "2023-01-15"
+      },
+      {
+        "research_title": "Earthquake Effects",
+        "faculty_lead": "Dr. Johnson",
+        "date": "2023-8-15"
+      }
+    ],
+    "sports_categories": [
+      {
+        "category_name": "Soccer",
+        "description": "Soccer is one of the most popular sports at University of XYZ. Students participate in friendly matches, intramural leagues, and intercollegiate competitions."
+      },
+      {
+        "category_name": "Basketball",
+        "description": "Basketball enthusiasts can join the college team or play casual games at the campus courts. Regular tournaments are organized to promote healthy competition."
+      },
+      {
+        "category_name": "Swimming",
+        "description": "The college has a well-equipped swimming pool where students can enjoy recreational swimming and compete in swimming events."
+      },
+      {
+        "category_name": "Football",
+        "description": "The college has a well-equipped on field where students can enjoy recreational swimming and compete in football events."
+      },
+      {
+        "category_name": "Track and Field",
+        "description": "For those who love athletics, track and field events provide an opportunity to showcase their speed, endurance, and strength in various disciplines."
+      }
+    ]
+  },
+  {
+    "college_image": "https://theweeklychallenger.com/wp-content/uploads/2018/08/Talladega_College_Savery_Library.jpg",
+    "college_name": "University of Alberta",
+    "admission_dates": "Fall 2023 - Spr 2024",
+    "admission_process": "Submit online application and required documents before the deadline. Attend admission interviews if required.",
+    "events": [
+      {
+        "event_name": "Orientation Day",
+        "date": "2023-08-25",
+        "location": "Campus Auditorium"
+      },
+      {
+        "event_name": "Research Symposium",
+        "date": "2023-11-10",
+        "location": "Science Building"
+      },
+      {
+        "event_name": "Sports Fest",
+        "date": "2024-02-15",
+        "location": "Sports Grounds"
+      }
+    ],
+    "research_history": [
+      {
+        "research_title": "Advancements in Robotics",
+        "faculty_lead": "Prof. John Smith",
+        "date": "2022-05-20"
+      },
+      {
+        "research_title": "Climate Change Mitigation",
+        "faculty_lead": "Dr. Emily Johnson",
+        "date": "2023-01-15"
+      },
+      {
+        "research_title": "Earthquake Effects",
+        "faculty_lead": "Dr. Johnson",
+        "date": "2023-8-15"
+      }
+    ],
+    "sports_categories": [
+      {
+        "category_name": "Soccer",
+        "description": "Soccer is one of the most popular sports at University of XYZ. Students participate in friendly matches, intramural leagues, and intercollegiate competitions."
+      },
+      {
+        "category_name": "Basketball",
+        "description": "Basketball enthusiasts can join the college team or play casual games at the campus courts. Regular tournaments are organized to promote healthy competition."
+      },
+      {
+        "category_name": "Swimming",
+        "description": "The college has a well-equipped swimming pool where students can enjoy recreational swimming and compete in swimming events."
+      },
+      {
+        "category_name": "Football",
+        "description": "The college has a well-equipped on field where students can enjoy recreational swimming and compete in football events."
+      },
+      {
+        "category_name": "Track and Field",
+        "description": "For those who love athletics, track and field events provide an opportunity to showcase their speed, endurance, and strength in various disciplines."
+      }
+    ]
+  },
+  {
+    "college_image": "https://media.workandmoney.com/cb/c8/cbc843fcb6cd491da47bddf7cbbda1e1.jpeg",
+    "college_name": "University of Calgary",
+    "admission_dates": "Spr 2024 - Fall 2025",
+    "admission_process": "Submit online application and required documents before the deadline. Attend admission interviews if required.",
+    "events": [
+      {
+        "event_name": "Welcome Fair",
+        "date": "2024-01-10",
+        "location": "Student Center"
+      },
+      {
+        "event_name": "Literary Festival",
+        "date": "2024-03-18",
+        "location": "Library"
+      }
+    ],
+    "research_history": [
+      {
+        "research_title": "Biotechnology Breakthroughs",
+        "faculty_lead": "Dr. Sarah Lee",
+        "date": "2022-11-30"
+      },
+      {
+        "research_title": "Renewable Energy Solutions",
+        "faculty_lead": "Prof. David Johnson",
+        "date": "2023-06-22"
+      },
+      {
+        "research_title": "Future Effect of AI",
+        "faculty_lead": "Prof. David Smith",
+        "date": "2023-06-22"
+      },
+      {
+        "research_title": "Green House Effect",
+        "faculty_lead": "Prof. Jon Doe",
+        "date": "2023-06-22"
+      }
+    ],
+    "sports_categories": [
+      {
+        "category_name": "Tennis",
+        "description": "Tennis enthusiasts can enjoy playing singles and doubles matches. The college hosts tennis tournaments, encouraging friendly competition."
+      },
+      {
+        "category_name": "Volleyball",
+        "description": "Volleyball is a popular sport at ABC College. Students can join the volleyball team or play casual games on the campus courts."
+      },
+      {
+        "category_name": "Badminton",
+        "description": "Badminton courts are available for students to play and enjoy this fast-paced racquet sport."
+      },
+      {
+        "category_name": "Table Tennis",
+        "description": "Table Tennis facilities are provided for students who enjoy the fast and competitive nature of the sport."
+      }
+    ]
+  },
+  {
+    "college_image": "https://agnr.umd.edu/sites/agnr.umd.edu/files/styles/optimized/public/2019-01/symons%20hall.jpg?itok=OsfiAXlc",
+    "college_name": "MacEwan University",
+    "admission_dates": "Fall 2024 - Spr 2025",
+    "admission_process": "Submit online application and required documents before the deadline. Attend admission interviews if required.",
+    "events": [
+      {
+        "event_name": "Open House",
+        "date": "2024-07-30",
+        "location": "Main Hall"
+      },
+      {
+        "event_name": "Tech Expo",
+        "date": "2024-09-20",
+        "location": "Engineering Building"
+      },
+      {
+        "event_name": "Intercollege Sports Meet",
+        "date": "2025-01-12",
+        "location": "Sports Grounds"
+      },
+      {
+        "event_name": "Annual Sports Day",
+        "date": "2024-05-05",
+        "location": "Sports Complex"
+      }
+    ],
+    "research_history": [
+      {
+        "research_title": "Artificial Intelligence Applications",
+        "faculty_lead": "Prof. Jane Williams",
+        "date": "2023-12-05"
+      },
+      {
+        "research_title": "Sustainable Urban Planning",
+        "faculty_lead": "Dr. Michael Brown",
+        "date": "2024-02-18"
+      }
+    ],
+    "sports_categories": [
+      {
+        "category_name": "Cricket",
+        "description": "Cricket is a popular sport at PQR Institute, with regular matches and tournaments held on the college campus."
+      },
+      {
+        "category_name": "Rugby",
+        "description": "Rugby enthusiasts can join the college team and participate in intercollege competitions, showcasing their strength and teamwork."
+      },
+      {
+        "category_name": "Baseball",
+        "description": "Baseball facilities are available for students who enjoy this bat-and-ball game. Friendly matches and competitions are organized regularly."
+      },
+      {
+        "category_name": "Golf",
+        "description": "Golf enthusiasts can practice their swing and putting skills at the college's golf course, enjoying the serene and challenging environment."
+      }
+    ]
+  }
+]
