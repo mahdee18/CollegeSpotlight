@@ -10,6 +10,7 @@ import Registration from "../Components/Register/Register";
 import Home from "../Components/Home/Home/Home";
 import NotFoundPage from "../Components/NotFoundPage/NotFoundPage";
 import CardDetails from "../Components/CardDetails/CardDetails";
+import CollegeList from "../Components/Admissions/CollegeList";
 
 export const router = createBrowserRouter([
   {
